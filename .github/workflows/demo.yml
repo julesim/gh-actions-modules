@@ -3,8 +3,10 @@ on:
   push:
     branches:
       - main
+environment:
+  name: testing
 env:
-  MY_ENV_VAR: ${{ secrets.MY_ENV_VAR_TEST }}
+  MY_ENV_VAR: ${{ secrets.MY_ENV_VAR }}
 jobs:
   test:
     runs-on: ubuntu-latest
